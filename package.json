@@ -1,0 +1,42 @@
+{
+  "name": "lxw-boilerplate-react-cli",
+  "version": "0.0.1",
+  "description": "Experimental scaffolding for non-production environments, primarily designed for quickly creating React + Webpack + TypeScript projects.",
+  "main": "index.ts",
+  "type": "module",
+  "homepage": "https://github.com/lixiaowei11111/lxw-cli.git",
+  "scripts": {
+    "dev": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
+    "build": "tsc",
+    "start": "node --experimental-specifier-resolution=node dist/index.js",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --fix --ext .ts ."
+  },
+  "bin": {
+    "lxw-cli": "dist/index.js"
+  },
+  "keywords": [
+    "cli",
+    "react",
+    "webpack",
+    "boilerplate",
+    "ts"
+  ],
+  "author": "lxw",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.4.1",
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^3.0.0"
+  }
+}

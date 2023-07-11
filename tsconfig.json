@@ -1,0 +1,16 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "outDir": "./dist"
+  },
+  "include": [".eslintrc.js",".prettierrc.js", "src/**/*"],
+  "exclude": ["node_modules", "lib/**/*"]
+}
