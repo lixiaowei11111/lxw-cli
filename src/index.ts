@@ -1,5 +1,9 @@
 #!/usr/bin/env node --experimental-specifier-resolution=node
 //  上面的一行为 npm执行bin全局命令要添加注释
+
+/**
+ * https://terwergreen.com/post/use-typescript-to-develop-a-custom-nodejs-frontend-development-scaffold-1i5fne.html#%E9%9C%80%E6%B1%82%E6%9D%A5%E6%BA%90
+ */
 import { Command } from "commander";
 import { log } from "console";
 import inquirer from "inquirer";
