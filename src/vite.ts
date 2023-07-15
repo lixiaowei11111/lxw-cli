@@ -274,7 +274,7 @@ async function init() {
           message: reset("Project name:"),
           initial: defaultTargetDir,
           onState: (state) => {
-            // 格式化项目名称,trim,并替换\/ 开头的
+            // 格式化项目名称,trim,并替换\/ 结尾的
             targetDir = formatTargetDir(state.value) || defaultTargetDir;
           },
         },
@@ -290,7 +290,7 @@ async function init() {
             ` is not empty. Remove existing files and continue?`,
         },
         {
-          /* 8. 判断是否进行了第七步操作,没有则跳过,或者进行了选了否则throw error停止进程 */
+          /* 8. 判断是否进行了第七步操作,没有则跳过,或者进行了但选了否则throw error停止进程 */
           type: (_, { overwrite }: { overwrite?: boolean }) => {
             if (overwrite === false) {
               throw new Error(red("✖") + " Operation cancelled");
@@ -541,7 +541,7 @@ function copy(src: string, dest: string) {
 }
 
 function copyDir(srcDir: string, destDir: string) {
-  fs.mkdirSync(destDir, { recursive: true });// 如果是文件夹则创建文件夹
+  fs.mkdirSync(destDir, { recursive: true });// 则创建文件夹
   for (const file of fs.readdirSync(srcDir)) {// 遍历目录信息,递归操作
     const srcFile = path.resolve(srcDir, file);
     const destFile = path.resolve(destDir, file);

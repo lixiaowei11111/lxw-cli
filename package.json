@@ -1,6 +1,6 @@
 {
-  "name": "lxw-boilerplate-react-cli",
-  "version": "0.0.1",
+  "name": "create-lxw-cli",
+  "version": "1.0.0",
   "description": "Experimental scaffolding for non-production environments, primarily designed for quickly creating React + Webpack + TypeScript projects.",
   "main": "index.ts",
   "type": "module",
@@ -13,7 +13,7 @@
     "lint:fix": "eslint --fix --ext .ts ."
   },
   "bin": {
-    "lxw-cli": "dist/index.js"
+    "create-lxw-cli": "index.js"
   },
   "keywords": [
     "cli",
@@ -39,7 +39,8 @@
     "ora": "^6.3.1",
     "prompts": "^2.4.2",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1"
   },
   "dependencies": {
     "@types/fs-extra": "^11.0.1",
@@ -51,5 +52,8 @@
     "fs-extra": "^11.1.1",
     "git-clone": "^0.2.0",
     "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
   }
 }

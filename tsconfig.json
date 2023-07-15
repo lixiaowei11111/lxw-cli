@@ -1,17 +1,20 @@
 // tsconfig.json
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "ESNext",
+    "target": "ES2020",
+    "module": "ES2020",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports":true,
     "strict": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "skipLibCheck": true,
-    "outDir": "./dist"
+    "outDir": "dist",
+    "declaration": false,
+    "noUnusedLocals": true
   },
-  "include": [".eslintrc.js",".prettierrc.js", "src/**/*"],
-  "exclude": ["node_modules", "dist/**/*","src/boilerplate"]
+  "include": ["src/index.ts"],
+  "exclude": ["node_modules", "dist/**/*","src/template"]
   // 屏蔽模板文件筛选
 }
