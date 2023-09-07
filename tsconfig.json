@@ -12,5 +12,6 @@
     "outDir": "./dist"
   },
   "include": [".eslintrc.js",".prettierrc.js", "src/**/*"],
-  "exclude": ["node_modules", "lib/**/*"]
+  "exclude": ["node_modules", "dist/**/*","src/boilerplate"]
+  // 屏蔽模板文件筛选
 }
