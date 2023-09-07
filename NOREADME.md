@@ -34,6 +34,25 @@
 + `cwd`
   + 返回Nodejs 进程的当前工作目录(current working directory of the Node.js process.)
 
++ `env`
+  + process.env属性返回一个包含用户环境的对象。如windows环境中配置`java`环境变量，可以通过`set`来设置临时环境变量
+  + 返回样例：
+  ```json
+  {
+    TERM: 'xterm-256color',
+    SHELL: '/usr/local/bin/bash',
+    USER: 'maciej',
+    PATH: '~/.bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin',
+    PWD: '/Users/maciej',
+    EDITOR: 'vim',
+    SHLVL: '1',
+    HOME: '/Users/maciej',
+    LOGNAME: 'maciej',
+    _: '/usr/local/bin/node'
+  } 
+  ```
+  + `process.env` 同时也可以用来获取启动node脚本时的自定义变量,如`process.env.NODE_ENV`,和`process.argv`有相同效果,不过前者获取的是属性,后者获取的更加完整且为一个数组
+
 + [`argv`](https://nodejs.org/dist/latest-v18.x/docs/api/process.html#processargv)
   + 
   ```plaintext
